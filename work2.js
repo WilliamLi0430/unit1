@@ -70,7 +70,7 @@ console.log(fizzBuzz(15));
 console.log(fizzBuzz(7)); */
 
 
-function getShippingCost(weight, isMember) {
+/* function getShippingCost(weight, isMember) {
     if (isMember === (true) && weight <= 5) {
         return ("free")
     } else if (isMember === (true) && weight > 3) {
@@ -90,4 +90,14 @@ function getShippingCost(weight, isMember) {
         return ("no membership and shipping nothing? brokie");
     }
 }
-console.log(getShippingCost(8, true));
+console.log(getShippingCost(8, true)); */
+
+
+let num = 20;
+let message;
+if (num % 2 === 0) {
+    message = "even";
+} else {
+    message = "odd";
+}
+let messageTernary = num = 2 ? "even" : "odd" 
