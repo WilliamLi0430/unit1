@@ -90,4 +90,4 @@ function getShippingCost(weight, isMember) {
         return ("no membership and shipping nothing? brokie");
     }
 }
-console.log(getShippingCost(3, true));
+console.log(getShippingCost(8, true));
