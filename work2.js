@@ -93,11 +93,13 @@ console.log(fizzBuzz(7)); */
 console.log(getShippingCost(8, true)); */
 
 
-let num = 20;
-let message;
-if (num % 2 === 0) {
-    message = "even";
-} else {
-    message = "odd";
+const numlist = [];
+function getNumbersInRange(start, end) {
+    for (let i = 1; i < numlist.length; i++) {
+        numlist.push(i);
+    }
+    console.log(numlist);
 }
-let messageTernary = num = 2 ? "even" : "odd" 
+console.log(getNumbersInRange(1, 5));
+console.log(getNumbersInRange(10, 10));
+console.log(getNumbersInRange(3, 8));
