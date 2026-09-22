@@ -93,13 +93,43 @@ console.log(fizzBuzz(7)); */
 console.log(getShippingCost(8, true)); */
 
 
+/* practice_04_loops.md
+
+
 const numlist = [];
 function getNumbersInRange(start, end) {
-    for (let i = 1; i < numlist.length; i++) {
-        numlist.push(i);
+    range = end - start + 1;
+    for (let i = 0; i < 1000; i++) {
+        if (i >= start && i <= end) {
+            numlist.push(i);
+        }
     }
-    console.log(numlist);
+    return(numlist);
 }
-console.log(getNumbersInRange(1, 5));
-console.log(getNumbersInRange(10, 10));
-console.log(getNumbersInRange(3, 8));
+console.log(getNumbersInRange(1, 5)); */
+
+
+/* function sumRange(start, end) {
+    total = 0
+    for (let i = start; i <= end; i++) {
+        total += i;
+    }
+    return(total);
+}
+
+console.log(sumRange(1, 5));
+console.log(sumRange(1, 100));
+console.log(sumRange(4, 4)); */
+
+
+/* arr = [];
+function countdown(n) {
+    while (n > 0) {
+        arr.push(n);
+        n -= 1;
+    }
+    return(arr);
+}
+console.log(countdown(5));
+console.log(countdown(1));
+console.log(countdown(8)); */
