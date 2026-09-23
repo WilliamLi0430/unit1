@@ -133,3 +133,25 @@ function countdown(n) {
 console.log(countdown(5));
 console.log(countdown(1));
 console.log(countdown(8)); */
+
+
+/* function countVowels(str) {
+    let letters = 0;
+    for (let i = 0; i < 10; i++) {
+        if (str[i] === "a" || "e" || "i" || "o" || "u");
+            letters += 1;
+            return(letters);
+    }
+}
+console.log(countVowels("hello")); */
+
+function countVowels(str) {
+    let letters = 0;
+    for (let i = 0; i < 10; i) {
+        if (str[i] === "n");
+            letters += 1;
+            i += 1;
+    }
+    return(letters);
+}
+console.log(countVowels("onen"));
