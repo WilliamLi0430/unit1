@@ -145,13 +145,35 @@ console.log(countdown(8)); */
 }
 console.log(countVowels("hello")); */
 
-function countVowels(str) {
+/* function countVowels(str) {
     let letters = 0;
-    for (let i = 0; i < 10; i) {
-        if (str[i] === "n");
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === "a" || 
+            str[i] === "e" || 
+            str[i] === "i" || 
+            str[i] === "o" || 
+            str[i] === "u") {
             letters += 1;
-            i += 1;
+        }
     }
     return(letters);
 }
-console.log(countVowels("onen"));
+console.log(countVowels("hello"));
+console.log(countVowels("javascript"));
+console.log(countVowels("xyz"));
+console.log(countVowels("aeiou")); */
+
+
+multiplyList = [];
+function multiplicationTable(n) {
+    for (let i = 0; i < n; i++) {
+        let v = 0
+        if (v > n) {
+            i * n === v;
+            multiplyList.push(v)
+        }
+    }
+    return(multiplyList);
+}
+
+console.log(multiplicationTable(4));
