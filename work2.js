@@ -163,8 +163,8 @@ console.log(countVowels("javascript"));
 console.log(countVowels("xyz"));
 console.log(countVowels("aeiou")); */
 
-
-multiplyList = [];
+//incomplete
+/* multiplyList = [];
 function multiplicationTable(n) {
     for (let i = 0; i < n; i++) {
         let v = 0
@@ -176,4 +176,21 @@ function multiplicationTable(n) {
     return(multiplyList);
 }
 
-console.log(multiplicationTable(4));
+console.log(multiplicationTable(4)); */
+
+
+
+//BOWLING
+
+function bowlingScoreCalculator() {
+    let points = 0;
+    let response = prompt("what were all your rolls? only numbers");
+}
+
+const messyString = "10.5,  20, 30.99 ";
+
+// Using parseInt ensures they strictly become integers
+const cleanIntegers = messyString.split(',').map(num => parseInt(num, 10));
+
+console.log(cleanIntegers); 
+// Output: [10, 20, 30]
