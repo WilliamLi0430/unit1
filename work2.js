@@ -184,13 +184,20 @@ console.log(multiplicationTable(4)); */
 
 function bowlingScoreCalculator() {
     let points = 0;
-    let response = prompt("what were all your rolls? only numbers");
+    let response = prompt("what were all your rolls? only numbers and commas");
+    const rollPoints = response.split(',').map(num => parseInt(num, 10));
+    rolls = rollPoints.size();
+    finalFrame = rollPoints.slice(-3)
+    for (i = 0; i < 11; i++) {
+        if (rollPoints[i] === 10) {
+            points + 10 + (rollPoints[i + 1]) + (rollPoints[i + 2]);
+        } else if (rollPoints[i] + rollPoints[i + 1] === 10) {
+            points + 10 + (rollPoints[i + 1]);
+        } else {
+            points += (rollPoints[i]);
+        }
+    }
+    if (finalFrame[0] === 10 || finalFrame[1] === 10 || finalFrame[2] === 10){
+        
+    }
 }
-
-const messyString = "10.5,  20, 30.99 ";
-
-// Using parseInt ensures they strictly become integers
-const cleanIntegers = messyString.split(',').map(num => parseInt(num, 10));
-
-console.log(cleanIntegers); 
-// Output: [10, 20, 30]
