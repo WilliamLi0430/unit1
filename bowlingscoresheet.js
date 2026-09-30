@@ -1,4 +1,4 @@
-/* Each game has 10 frames.In each frame, you get two rolls 
+/* Each game has 10 frames. In each frame, you get two rolls 
 to knock down 10 pins (except the 10th frame).
 Each pin you knock down is worth one point.
 
