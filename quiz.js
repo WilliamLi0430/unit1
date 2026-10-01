@@ -12,4 +12,3 @@ function foodLines(m) {
     return(output);
 }
 console.log(foodLines(3));
-//print list place not number
