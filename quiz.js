@@ -6,7 +6,6 @@ function foodLines(m) {
         output.push(Math.min(...input));
         let m = input.indexOf(Math.min(...input));
         input[m] += 1;
-        console.log(input);
     }
     return(output);
 }
