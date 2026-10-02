@@ -1,14 +1,12 @@
-
 let input = [2, 2, 3, 3, 3];
 let output = [];
 
 function foodLines(m) {
     for (i = 0; i < m; i++) {
-        console.log(Math.min(...input));
-        Math.min(...input);
-        
-        input.push(y);
-        output.push(y);
+        output.push(Math.min(...input));
+        let m = input.indexOf(Math.min(...input));
+        input[m] += 1;
+        console.log(input);
     }
     return(output);
 }
