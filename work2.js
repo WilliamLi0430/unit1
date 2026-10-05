@@ -182,22 +182,29 @@ console.log(multiplicationTable(4)); */
 
 //BOWLING
 
+let rolls = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10];
 function bowlingScoreCalculator() {
     let points = 0;
-    let response = prompt("what were all your rolls? only numbers and commas");
-    const rollPoints = response.split(',').map(num => parseInt(num, 10));
-    rolls = rollPoints.size();
-    finalFrame = rollPoints.slice(-3)
-    for (i = 0; i < 11; i++) {
-        if (rollPoints[i] === 10) {
-            points + 10 + (rollPoints[i + 1]) + (rollPoints[i + 2]);
-        } else if (rollPoints[i] + rollPoints[i + 1] === 10) {
-            points + 10 + (rollPoints[i + 1]);
+    finalFrame = rolls.slice(-3)
+    for (i = 0; i < rolls.length; i++) {
+        if (rolls[i] === 10) {
+            points += 10 + (rolls[i + 1]) + (rolls[i + 2]);
+            console.log(points);
+        } else if (rolls[i] + rolls[i + 1] === 10) {
+            points += 10 + (rolls[i + 1]);
+            console.log(points);
         } else {
-            points += (rollPoints[i]);
+            points += (rolls[i]);
+            console.log(points);
         }
     }
-    if (finalFrame[0] === 10 || finalFrame[1] === 10 || finalFrame[2] === 10){
-        
+    if (finalFrame[0] === 10 || finalFrame[1] === 10 || finalFrame[2] === 10) {
+        if (finalFrame[0] === 10) {
+            points += 10 + finalFrame[1] + finalFrame[2];
+        } if (finalFrame[0] + finalFrame[1] === 10) {
+            points += 10 = finalFrame[2];
+        } else
     }
+    //return points;
 }
+console.log(bowlingScoreCalculator());
