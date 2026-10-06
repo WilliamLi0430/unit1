@@ -182,7 +182,7 @@ console.log(multiplicationTable(4)); */
 
 //BOWLING
 
-let rolls = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10];
+let rolls = [1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 10, 2, 3];
 function bowlingScoreCalculator() {
     let points = 0;
     finalFrame = rolls.slice(-3)
@@ -198,13 +198,16 @@ function bowlingScoreCalculator() {
             console.log(points);
         }
     }
-    if (finalFrame[0] === 10 || finalFrame[1] === 10 || finalFrame[2] === 10) {
-        if (finalFrame[0] === 10) {
-            points += 10 + finalFrame[1] + finalFrame[2];
-        } if (finalFrame[0] + finalFrame[1] === 10) {
-            points += 10 = finalFrame[2];
-        } else
-    }
+    if (finalFrame[0] === 10) {
+        points += 10 + finalFrame[1] + finalFrame[2];
+        console.log(points);
+        } else if (finalFrame[0] + finalFrame[1] === 10) {
+            points += 10 + finalFrame[2];
+            console.log(points);
+        } else {
+            points += finalFrame[0] + finalFrame[1] + finalFrame[2];
+            console.log(points);
+        }
     //return points;
 }
 console.log(bowlingScoreCalculator());
