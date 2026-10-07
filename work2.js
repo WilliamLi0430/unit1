@@ -182,7 +182,7 @@ console.log(multiplicationTable(4)); */
 
 //BOWLING
 
-let rolls = [1, 2, 5, 5, 3, 4, 7, 3, 10, 1, 2];
+let rolls = [2, 2, 5, 5, 3, 4, 7, 3, 10, 1, 2];
 function bowlingScoreCalculator() {
     let points = 0;
     let i = 0;
