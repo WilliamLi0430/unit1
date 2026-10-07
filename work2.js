@@ -185,21 +185,25 @@ console.log(multiplicationTable(4)); */
 let rolls = [1, 2, 5, 5, 3, 4, 7, 3, 10, 1, 2];
 function bowlingScoreCalculator() {
     let points = 0;
+    let i = 0;
     finalFrame = rolls.slice(-3);
     for (let frame = 0; frame < 10;) {
         if (rolls[i] === 10) {
-            points += 10 + (rolls[i + 1] || 0) + (rolls[i + 2 ]|| 0);
+            points += 10 + (rolls[i + 1] || 0) + (rolls[i + 2]|| 0);
             i += 1;
+            frame++;
             console.log(points);
         }
-        else if (((rolls[i] + rolls[i + 1] === 10 && (rolls[i] !== 0)) || (rolls[i] + rolls[i + 1] === 10 && rolls[i + 1]!== 0))) {
-            points += 10 + (rolls[i + 2 ]|| 0);
+         else if ((rolls[i] || 0) + (rolls[i + 1] || 0) === 10) { 
+            points += 10 + (rolls[i + 2]);
             i += 2;
+            frame++;
             console.log(points);
         }
         else if ((rolls[i] + rolls[i + 1]) < 10) {
             points += (rolls[i] || 0) + (rolls[i + 1] || 0);
             i += 2;
+            frame++;
             console.log(points);
         }
     }
