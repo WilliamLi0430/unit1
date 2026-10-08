@@ -182,26 +182,23 @@ console.log(multiplicationTable(4)); */
 
 //BOWLING
 
-let rolls = [2, 2, 5, 5, 3, 4, 7, 3, 10, 1, 2];
+let rolls = [2, 2, 5, 5, 3, 4, 7, 3, 10, 1, 2, 5, 2, 3, 5, 4, 6, 10, 2, 3];
 function bowlingScoreCalculator() {
     let points = 0;
     let i = 0;
     for (let frame = 0; frame < 10; frame++) {  
         if (rolls[i] === undefined) break;
-        if (rolls[i] === 10) {
+        else if (rolls[i] === 10) {
             points += 10 + (rolls[i + 1] || 0) + (rolls[i + 2]|| 0);
             i += 1;
-            console.log(points);
         }
-         else if ((rolls[i] || 0) + (rolls[i + 1] || 0) === 10) { 
+        else if ((rolls[i] || 0) + (rolls[i + 1] || 0) === 10) { 
             points += 10 + (rolls[i + 2] || 0);
             i += 2;
-            console.log(points);
         }
         else if ((rolls[i] + rolls[i + 1]) < 10) {
             points += (rolls[i] || 0) + (rolls[i + 1] || 0);
             i += 2;
-            console.log(points);
         }
     }
     return points;
