@@ -1,4 +1,5 @@
 const shoppingList = [
+    //section one: trims
     {name: "Silence Trim", rarityPercent: 1.2, location: "Ancient City", price: 9.88},
     {name: "Ward Trim", rarityPercent: 5, location: "Ancient City", price: 9.50},
     {name: "Bolt Trim", rarityPercent: 6, location: "Trial Chamber", price: 9.40},
@@ -18,5 +19,17 @@ const shoppingList = [
     {name: "Flow Trim", rarityPercent: 22.5, location: "Trial Chamber", price: 7.75},
     {name: "Eye Trim", rarityPercent: "100% or 10%", location: "Stronghold", price: 9.00}, //altar or library
     {name: "Netherite Upgrade Template", rarityPercent: "100% or 10%", location: "Bastion", price: 15.00}, //treasure or others
+    //section 2: ores (for the trims)
+    {name: "Copper Ingot", rarityPercent: 0, location: "come up with one", price: 0},
+    {name: "Lapis Lazuli", rarityPercent: 0, location: "come up with one", price: 0},
+    {name: "Redstone", rarityPercent: 0, location: "come up with one", price: 0},
+    {name: "Gold Ingot", rarityPercent: 0, location: "come up with one", price: 0},
+    {name: "Iron Ingot", rarityPercent: 0, location: "come up with one", price: 0},
+    {name: "Emerald", rarityPercent: 0, location: "come up with one", price: 0},
+    {name: "Diamond", rarityPercent: 0, location: "come up with one", price: 0},
+    {name: "Quartz", rarityPercent: 0, location: "come up with one", price: 0},
+    {name: "Netherite", rarityPercent: 0, location: "come up with one", price: 0},
+    {name: "Resin Brick", rarityPercent: 0, location: "come up with one", price: 0},
+    {name: "Amethyst Shard", rarityPercent: 0, location: "come up with one", price: 0},
 ];
 let cart = [];
