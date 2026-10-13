@@ -20,16 +20,17 @@ const shoppingList = [
     {name: "Eye Trim", rarityPercent: "100% or 10%", location: "Stronghold", price: 9.00}, //altar or library
     {name: "Netherite Upgrade Template", rarityPercent: "100% or 10%", location: "Bastion", price: 15.00}, //treasure or others
     //section 2: ores (for the trims)
-    {name: "Copper Ingot", rarityPercent: 0, location: "come up with one", price: 0},
-    {name: "Lapis Lazuli", rarityPercent: 0, location: "come up with one", price: 0},
-    {name: "Redstone", rarityPercent: 0, location: "come up with one", price: 0},
-    {name: "Gold Ingot", rarityPercent: 0, location: "come up with one", price: 0},
-    {name: "Iron Ingot", rarityPercent: 0, location: "come up with one", price: 0},
-    {name: "Emerald", rarityPercent: 0, location: "come up with one", price: 0},
-    {name: "Diamond", rarityPercent: 0, location: "come up with one", price: 0},
-    {name: "Quartz", rarityPercent: 0, location: "come up with one", price: 0},
-    {name: "Netherite", rarityPercent: 0, location: "come up with one", price: 0},
-    {name: "Resin Brick", rarityPercent: 0, location: "come up with one", price: 0},
-    {name: "Amethyst Shard", rarityPercent: 0, location: "come up with one", price: 0},
+    {name: "Copper Ingot", rarityPercent: 0, location: "Caves, Trial Chambers, Abandoned Camps", price: 0},
+    {name: "Lapis Lazuli", rarityPercent: 0, location: "Caves, Shipwrecks, Mineshafts, Villages, Villagers", price: 0},
+    {name: "Redstone", rarityPercent: 0, location: "Caves, Mineshafts, Villagers, Dungeons, Strongholds, Woodland Mansions", price: 0},
+    {name: "Gold Ingot", rarityPercent: 0, location: "Caves, Shipwrecks, Mineshafts, Buried Treasure, Strongholds, Woodland Mansions, Bastions, Ruined Portals, Dungeons, Desert Pyramids, Jungle Temples, Nether Fortress, End Cities, Villages, Ocean Monument, , Abandoned Camps, Villagers", price: 0},
+    {name: "Iron Ingot", rarityPercent: 0, location: "Caves, Shipwrecks, Dungeons, Stronghold, Buried Treasure, Pillager Outposts, Woodland Mansions, Desert Pyramids, Jungle Temples, Nether Fortress, Bastions, Mineshafts, Trial Chambers, Ocean Ruins, Abandoned Camps, Villages", price: 0},
+    {name: "Emerald", rarityPercent: 0, location: "Caves, Villages, Villagers, Shipwrecks, Ocean Ruins, Trial Chambers, Buried Treasure, Desert Pyramids, Igloos, Jungle Temples, Abandoned Camps, End Cities", price: 0},
+    {name: "Diamond", rarityPercent: 0, location: "Caves, Buried Treasure, Trial Chambers, End Cities, Nether Fortress, Shipwrecks, Bastions, Jungle Temple, Desert Pyramid, Stronghold, Mineshafts, Abandoned Camps, Woodland Mansions, Ancient Cities", price: 0},
+    {name: "Quartz", rarityPercent: 0, location: "Nether, Bastions, Villagers", price: 0},
+    {name: "Netherite", rarityPercent: 0, location: "Nether, Bastions", price: 0},
+    {name: "Resin Brick", rarityPercent: 0, location: "Pale Oak Forest, Woodland Mansions", price: 0},
+    {name: "Amethyst Shard", rarityPercent: 0, location: "Amethyst Geodes, Ancient Cities, Trial Chambers", price: 0},
 ];
 let cart = [];
+let price = 0;
