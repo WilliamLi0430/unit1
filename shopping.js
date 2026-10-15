@@ -42,7 +42,7 @@ import {stdin as input, stdout as output} from 'node:process';
 async function toShop() {
   const rl = readline.createInterface({input, output});
   try {
-    const shop = await rl.question("What would you like to buy?");
+    const shop = await rl.question("What would you like to buy? ");
     const item = shoppingList[shop];
 
     if (item) {
