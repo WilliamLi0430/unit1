@@ -35,27 +35,36 @@ const shoppingList = [
 let cart = [];
 let price = 0;
 
+//code taken from google, current test
 import readline from 'node:readline/promises';
 import {stdin as input, stdout as output} from 'node:process';
 
-//code taken from google, current test
 async function toShop() {
-  const rl = readline.createInterface({input, output});
-  try {
-    const shop = await rl.question("What would you like to buy? ");
-    const item = shoppingList[shop];
+    let moreShop = true;
+    while (moreShop === true) {
+        const rl = readline.createInterface({input, output});
+        try {
+            const shop = await rl.question("What would you like to buy? Write s to stop shopping. ");
+            const item = shoppingList.find(thing => thing.name.toLowerCase() === shop.toLowerCase());
 
-    if (item) {
-        console.log(`Added ${item.name} to your cart.`);
-        cart.push(item.name);
-        price += item.price;
-    } else {
-        console.log(`The item ${shop} is not in our catalog.`);
+            if (shop === "s") {
+                moreShop = false;
+                break;
+            }
+
+            if (item) {
+                console.log(`Added a ${item.name} to your cart.`);
+                cart.push(item.name);
+                price += item.price;
+            } else {
+                console.log(`The item ${shop} is not in our catalog.`);
+            }
+        
+        } finally {
+            rl.close();
+        }
     }
-    
-    } finally {
-        rl.close();
-    }
+    console.log(`Your total is $${price}`);
 }
 
 toShop();
