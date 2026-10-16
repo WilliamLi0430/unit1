@@ -40,8 +40,23 @@ import readline from 'node:readline/promises';
 import {stdin as input, stdout as output} from 'node:process';
 
 async function toShop() {
-    console.log
+    shoppingList.forEach((item, i) => {
+        console.log(`${i + 1}. ${item.name}, $${item.price}`);
+    });
+
     let moreShop = true;
+
+    const shop = await rl.question("What would you like to buy? Write s to stop shopping. ");
+    const item = shoppingList.find(thing => thing.name.toLowerCase() === shop.toLowerCase());
+    if (item) {
+        console.log(`Added a ${item.name} to your cart.`);
+        cart.push(item.name);
+        price += item.price;
+    } else {
+        console.log(`The item ${shop} is not in our catalog.`);
+    }
+    //new dialogue for the next shop item
+    
     while (moreShop === true) {
         const rl = readline.createInterface({input, output});
         try {
