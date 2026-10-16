@@ -46,29 +46,51 @@ async function toShop() {
 
     let moreShop = true;
 
-    const shop = await rl.question("What would you like to buy? Write s to stop shopping. ");
-    const item = shoppingList.find(thing => thing.name.toLowerCase() === shop.toLowerCase());
-    if (item) {
-        console.log(`Added a ${item.name} to your cart.`);
-        cart.push(item.name);
-        price += item.price;
-    } else {
-        console.log(`The item ${shop} is not in our catalog.`);
+    const rl = readline.createInterface({input, output});
+    try {
+        const shop = await rl.question("What would you like to buy? ");
+        const item = shoppingList.find(thing => thing.name.toLowerCase() === shop.toLowerCase());
+        if (item) {
+            console.log(`Added a ${item.name} to your cart.`);
+            cart.push(item.name);
+            price += item.price;
+        } else {
+            console.log(`The item ${shop} is not in our catalog.`);
+        }
+    } finally {
+        rl.close();
     }
-    //new dialogue for the next shop item
     
     while (moreShop === true) {
         const rl = readline.createInterface({input, output});
         try {
-            const shop = await rl.question("What would you like to buy? Write s to stop shopping. ");
+            const shop = await rl.question("Write another item to buy, c to check your cart, or type s to stop shopping. ");
             const item = shoppingList.find(thing => thing.name.toLowerCase() === shop.toLowerCase());
+            rl.close();
 
-            if (shop === "s") {
-                moreShop = false;
-                break;
+            if (shop === "c") {
+                console.log(`You currently have ${cart} in your cart.`);
+                console.log(`The total price of your cart is $${price}`);
             }
 
-            if (item) {
+            else if (shop === "s") {
+                const rl = readline.createInterface({input, output});
+                try {
+                    const ending = await rl.question("Are you sure you want to stop shopping? Yes/No: ");
+                    const end = ending.toLowerCase();
+
+                    if (end === "yes") {
+                        moreShop = false;
+                        break;
+                    } else {
+                        continue;
+                    }
+                } finally {
+                    rl.close();
+                }
+            }
+
+            else if (item) {
                 console.log(`Added a ${item.name} to your cart.`);
                 cart.push(item.name);
                 price += item.price;
