@@ -40,6 +40,7 @@ import readline from 'node:readline/promises';
 import {stdin as input, stdout as output} from 'node:process';
 
 async function toShop() {
+    console.log
     let moreShop = true;
     while (moreShop === true) {
         const rl = readline.createInterface({input, output});
