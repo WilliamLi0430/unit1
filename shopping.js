@@ -41,7 +41,7 @@ import {stdin as input, stdout as output} from 'node:process';
 
 async function toShop() {
     shoppingList.forEach((item, i) => {
-        console.log(`${i + 1}. ${item.name}, $${item.price}`);
+        console.log(`${i + 1}. ${item.name}, $${item.price.toFixed(2)}`);
     });
 
     let moreShop = true;
@@ -64,13 +64,30 @@ async function toShop() {
     while (moreShop === true) {
         const rl = readline.createInterface({input, output});
         try {
-            const shop = await rl.question("Write another item to buy, c to check your cart, or type s to stop shopping. ");
+            const shop = await rl.question("Write another item to buy, type 'c' to check your cart, type 'r' to remove something from your cart, or type 's' to stop shopping. ");
             const item = shoppingList.find(thing => thing.name.toLowerCase() === shop.toLowerCase());
             rl.close();
 
             if (shop === "c") {
+                let decimalPrice = price.toFixed(2);
                 console.log(`You currently have ${cart} in your cart.`);
-                console.log(`The total price of your cart is $${price}`);
+                console.log(`The total price of your cart is $${decimalPrice}`);
+            }
+
+            else if (shop === "r") {
+                console.log(cart);
+                const rl = readline.createInterface({input, output});
+                try {
+                    const remove = await rl.question("type the item name of the item you would like to remove. ");
+                    const removeLower = remove.toLowerCase();
+
+                    if (removeLower = item) {
+                        const itemx = cart.indexOf(item);
+                        cart.splice(itemx);
+                    }
+                } finally {
+                    rl.close();
+                }
             }
 
             else if (shop === "s") {
@@ -102,7 +119,8 @@ async function toShop() {
             rl.close();
         }
     }
-    console.log(`Your total is $${price}`);
+    let decimalPrice = +price.toFixed(2);
+    console.log(`Your total is $${decimalPrice}`);
 }
 
 toShop();
