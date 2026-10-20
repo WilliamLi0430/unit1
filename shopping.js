@@ -34,7 +34,7 @@ const shoppingList = [
 ];
 let cart = [];
 let price = 0;
-let discount = 0;
+let discount = 1;
 
 //code taken from google, current test
 import readline from 'node:readline/promises';
@@ -125,11 +125,14 @@ async function toShop() {
                     const count = dis.toLowerCase();
 
                     if (count === "yes") {
-                        discount += 0.95; //5% discount
-                        price = price * discount;
+                        discount *= 0.95; //5% discount
+                        console.log("You have entered the discount code 'yes', which gives you a 5% discount!")
                     } else if (count === "nice") {
-                        discount += 0.9; //10% discount
-                        price = price * discount;
+                        discount *= 0.9; //10% discount
+                        console.log("You have entered the discount code 'nice', which gives you a 10% discount!")
+                    }  else if (count === "great") {
+                        discount *= 0.85; //15% discount
+                        console.log("You have entered the discount code 'great', which gives you a 15% discount!")
                     } else {
                         console.log("Your discount code is invalid or expired.")
                         continue;
@@ -155,7 +158,8 @@ async function toShop() {
         }
     }
     //receipt
-    let decimalPrice = +price.toFixed(2);
+    let discountPrice = price * discount;
+    let decimalPrice = +discountPrice.toFixed(2);
     console.log(`Your total is $${decimalPrice}`);
 }
 
