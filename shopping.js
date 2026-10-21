@@ -54,10 +54,11 @@ async function toShop() {
         try {
             console.log("Write an item to put it in your cart, type 'help' for a list of commands, or type 's' to stop shopping.");
             const shop = await rl.question("");
+            const shopLower = shop.toLowerCase();
             const item = shoppingList.find(thing => thing.name.toLowerCase() === shop.toLowerCase());
             rl.close();
 
-            if (shop === "help") {
+            if (shopLower === "help") {
                 console.log("Here are the current list of commands:");
                 console.log("Type 'c' to view your cart and your current total.");
                 console.log("Type 'r' to remove something from your cart.");
@@ -66,14 +67,14 @@ async function toShop() {
             }
 
             //access cart with "c"
-            else if (shop === "c") {
+            else if (shopLower === "c") {
                 let decimalPrice = price.toFixed(2);
                 console.log(`You currently have ${cart} in your cart.`);
                 console.log(`The total price of your cart is $${decimalPrice}`);
             }
 
             //remove items from cart with "r"
-            else if (shop === "r") {
+            else if (shopLower === "r") {
                 console.log(cart);
                 const rl = readline.createInterface({input, output});
                 try {
@@ -84,6 +85,7 @@ async function toShop() {
                     if (itemx > -1) {
                         cart.splice(itemx, 1);
                         console.log(cart);
+                        price -= price;
                     }
                     else {
                         console.log("This item is not in your cart.");
@@ -94,7 +96,7 @@ async function toShop() {
             }
 
             //stop shopping with "s"
-            else if (shop === "s") {
+            else if (shopLower === "s") {
                 const rl = readline.createInterface({input, output});
                 try {
                     const ending = await rl.question("Are you sure you want to stop shopping? Yes/No: ");
@@ -111,7 +113,7 @@ async function toShop() {
             }
 
             //discount codes
-            else if (shop === "code") {
+            else if (shopLower === "code") {
                 const rl = readline.createInterface({input, output});
                 try {
                     const dis = await rl.question("What is your discount code? ");
@@ -135,7 +137,7 @@ async function toShop() {
             }
 
             //shopping catalog once only
-            else if (shop === "list") {
+            else if (shopLower === "list") {
                 if (listTime === 0) {
                     shoppingList.forEach((item, i) => {
                         console.log(`${i + 1}. ${item.name}, $${item.price.toFixed(2)}, ${item.stock} in stock`);
@@ -170,6 +172,7 @@ async function toShop() {
             rl.close();
         }
     }
+
     //receipt
     let discountPrice = price * discount;
     let decimalPrice = +discountPrice.toFixed(2);
