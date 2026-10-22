@@ -166,7 +166,8 @@ async function toShop() {
                 item.stock -= 1;
             }
 
-            //if statement: if duplicate, add x(n)
+            //cart functionality
+            
         
         } finally {
             rl.close();
