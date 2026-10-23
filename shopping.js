@@ -1,36 +1,36 @@
 const shoppingList = [
     //section one: trims
-    {name: "Silence Trim", rarityPercent: 1.2, location: "Ancient City", stock: 1, quantity: 0, price: 9.88},
-    {name: "Ward Trim", rarityPercent: 5, location: "Ancient City", stock: 1, quantity: 0, price: 9.50},
-    {name: "Bolt Trim", rarityPercent: 6, location: "Trial Chamber", stock: 1, quantity: 0, price: 9.40},
-    {name: "Vex Trim", rarityPercent: 50, location: "Woodland Mansion", stock: 1, quantity: 0, price: 5.00},
-    {name: "Spire Trim", rarityPercent: 6.7, location: "End City", stock: 1, quantity: 0, price: 9.33},
-    {name: "Wild Trim", rarityPercent: 33.3, location: "Jungle Temple", stock: 1, quantity: 0, price: 6.67},
-    {name: "Dune Trim", rarityPercent: 14.3, location: "Desert Pyramid", stock: 1, quantity: 0, price: 8.67},
-    {name: "Tide Trim", rarityPercent: 20, location: "Ocean Monument", stock: 1, quantity: 0, price: 8.00},
-    {name: "Rib Trim", rarityPercent: 6.7, location: "Fortress", stock: 1, quantity: 0, price: 9.33},
-    {name: "Snout Trim", rarityPercent: 8.3, location: "Bastion", stock: 1, quantity: 0, price: 9.17},
-    {name: "Wayfinder Trim", rarityPercent: 8.3, location: "Trail Ruins", stock: 1, quantity: 0, price: 9.17},
-    {name: "Raiser Trim", rarityPercent: 8.3, location: "Trail Ruins", stock: 1, quantity: 0, price: 9.17},
-    {name: "Shaper Trim", rarityPercent: 8.3, location: "Trail Ruins", stock: 1, quantity: 0, price: 9.17},
-    {name: "Host Trim", rarityPercent: 8.3, location: "Trail Ruins", stock: 1, quantity: 0, price: 9.17},
-    {name: "Coast Trim", rarityPercent: 16.7, location: "Shipwrecks", stock: 1, quantity: 0, price: 8.33},
-    {name: "Sentry Trim", rarityPercent: 25, location: "Pillager Outpost", stock: 1, quantity: 0, price: 7.50},
-    {name: "Flow Trim", rarityPercent: 22.5, location: "Trial Chamber", stock: 1, quantity: 0, price: 7.75},
-    {name: "Eye Trim", rarityPercent: "100% or 10%", location: "Stronghold", stock: 1, quantity: 0, price: 9.00}, //altar or library
-    {name: "Netherite Upgrade Template", rarityPercent: "100% or 10%", location: "Bastion", stock: 1, quantity: 0, price: 15.00}, //treasure or others
+    {name: "Silence Trim", rarityPercent: 1.2, location: "Ancient City", stock: 3, quantity: 0, price: 9.88},
+    {name: "Ward Trim", rarityPercent: 5, location: "Ancient City", stock: 3, quantity: 0, price: 9.50},
+    {name: "Bolt Trim", rarityPercent: 6, location: "Trial Chamber", stock: 3, quantity: 0, price: 9.40},
+    {name: "Vex Trim", rarityPercent: 50, location: "Woodland Mansion", stock: 3, quantity: 0, price: 5.00},
+    {name: "Spire Trim", rarityPercent: 6.7, location: "End City", stock: 3, quantity: 0, price: 9.33},
+    {name: "Wild Trim", rarityPercent: 33.3, location: "Jungle Temple", stock: 3, quantity: 0, price: 6.67},
+    {name: "Dune Trim", rarityPercent: 14.3, location: "Desert Pyramid", stock: 3, quantity: 0, price: 8.67},
+    {name: "Tide Trim", rarityPercent: 20, location: "Ocean Monument", stock: 3, quantity: 0, price: 8.00},
+    {name: "Rib Trim", rarityPercent: 6.7, location: "Fortress", stock: 3, quantity: 0, price: 9.33},
+    {name: "Snout Trim", rarityPercent: 8.3, location: "Bastion", stock: 3, quantity: 0, price: 9.17},
+    {name: "Wayfinder Trim", rarityPercent: 8.3, location: "Trail Ruins", stock: 3, quantity: 0, price: 9.17},
+    {name: "Raiser Trim", rarityPercent: 8.3, location: "Trail Ruins", stock: 3, quantity: 0, price: 9.17},
+    {name: "Shaper Trim", rarityPercent: 8.3, location: "Trail Ruins", stock: 3, quantity: 0, price: 9.17},
+    {name: "Host Trim", rarityPercent: 8.3, location: "Trail Ruins", stock: 3, quantity: 0, price: 9.17},
+    {name: "Coast Trim", rarityPercent: 16.7, location: "Shipwrecks", stock: 3, quantity: 0, price: 8.33},
+    {name: "Sentry Trim", rarityPercent: 25, location: "Pillager Outpost", stock: 3, quantity: 0, price: 7.50},
+    {name: "Flow Trim", rarityPercent: 22.5, location: "Trial Chamber", stock: 3, quantity: 0, price: 7.75},
+    {name: "Eye Trim", rarityPercent: "100% or 10%", location: "Stronghold", stock: 3, quantity: 0, price: 9.00}, //altar or library
+    {name: "Netherite Upgrade Template", rarityPercent: "100% or 10%", location: "Bastion", stock: 3, quantity: 0, price: 15.00}, //treasure or others
     //section 2: ores (for the trims)
-    {name: "Copper Ingot", rarityPercent: 0, location: "Caves, Trial Chambers, Abandoned Camps", stock: 1, quantity: 0, price: 3.00},
-    {name: "Lapis Lazuli", rarityPercent: 0, location: "Caves, Shipwrecks, Mineshafts, Villages, Villagers", stock: 1, quantity: 0, price: 5.00},
-    {name: "Redstone", rarityPercent: 0, location: "Caves, Mineshafts, Villagers, Dungeons, Strongholds, Woodland Mansions", stock: 1, quantity: 0, price: 4.50},
-    {name: "Gold Ingot", rarityPercent: 0, location: "Caves, Shipwrecks, Mineshafts, Buried Treasures, Strongholds, Woodland Mansions, Bastions, Ruined Portals, Dungeons, Desert Pyramids, Jungle Temples, Nether Fortress, End Cities, Villages, Ocean Monuments, Abandoned Camps, Villagers", stock: 1, quantity: 0, price: 7.50},
-    {name: "Iron Ingot", rarityPercent: 0, location: "Caves, Shipwrecks, Dungeons, Stronghold, Buried Treasures, Pillager Outposts, Woodland Mansions, Desert Pyramids, Jungle Temples, Nether Fortress, Bastions, Mineshafts, Trial Chambers, Ocean Ruins, Abandoned Camps, Villages", stock: 1, quantity: 0, price: 8.50},
-    {name: "Emerald", rarityPercent: 0, location: "Caves, Villages, Villagers, Shipwrecks, Ocean Ruins, Trial Chambers, Buried Treasures, Desert Pyramids, Igloos, Jungle Temples, Abandoned Camps, End Cities", stock: 1, quantity: 0, price: 6.00},
-    {name: "Diamond", rarityPercent: 0, location: "Caves, Buried Treasures, Trial Chambers, End Cities, Nether Fortresses, Shipwrecks, Bastions, Jungle Temples, Desert Pyramids, Strongholds, Mineshafts, Abandoned Camps, Woodland Mansions, Ancient Cities", stock: 1, quantity: 0, price: 10.00},
-    {name: "Quartz", rarityPercent: 0, location: "Nether, Bastions, Villagers", stock: 1, quantity: 0, price: 3.00},
-    {name: "Netherite", rarityPercent: 0, location: "Nether, Bastions", stock: 1, quantity: 0, price: 15.00},
-    {name: "Resin Brick", rarityPercent: 0, location: "Pale Oak Forest, Woodland Mansions", stock: 1, quantity: 0, price: 4.50},
-    {name: "Amethyst Shard", rarityPercent: 0, location: "Amethyst Geodes, Ancient Cities, Trial Chambers", stock: 1, quantity: 0, price: 6.00},
+    {name: "Copper Ingot", rarityPercent: 0, location: "Caves, Trial Chambers, Abandoned Camps", stock: 3, quantity: 0, price: 3.00},
+    {name: "Lapis Lazuli", rarityPercent: 0, location: "Caves, Shipwrecks, Mineshafts, Villages, Villagers", stock: 3, quantity: 0, price: 5.00},
+    {name: "Redstone", rarityPercent: 0, location: "Caves, Mineshafts, Villagers, Dungeons, Strongholds, Woodland Mansions", stock: 3, quantity: 0, price: 4.50},
+    {name: "Gold Ingot", rarityPercent: 0, location: "Caves, Shipwrecks, Mineshafts, Buried Treasures, Strongholds, Woodland Mansions, Bastions, Ruined Portals, Dungeons, Desert Pyramids, Jungle Temples, Nether Fortress, End Cities, Villages, Ocean Monuments, Abandoned Camps, Villagers", stock: 3, quantity: 0, price: 7.50},
+    {name: "Iron Ingot", rarityPercent: 0, location: "Caves, Shipwrecks, Dungeons, Stronghold, Buried Treasures, Pillager Outposts, Woodland Mansions, Desert Pyramids, Jungle Temples, Nether Fortress, Bastions, Mineshafts, Trial Chambers, Ocean Ruins, Abandoned Camps, Villages", stock: 3, quantity: 0, price: 8.50},
+    {name: "Emerald", rarityPercent: 0, location: "Caves, Villages, Villagers, Shipwrecks, Ocean Ruins, Trial Chambers, Buried Treasures, Desert Pyramids, Igloos, Jungle Temples, Abandoned Camps, End Cities", stock: 3, quantity: 0, price: 6.00},
+    {name: "Diamond", rarityPercent: 0, location: "Caves, Buried Treasures, Trial Chambers, End Cities, Nether Fortresses, Shipwrecks, Bastions, Jungle Temples, Desert Pyramids, Strongholds, Mineshafts, Abandoned Camps, Woodland Mansions, Ancient Cities", stock: 3, quantity: 0, price: 10.00},
+    {name: "Quartz", rarityPercent: 0, location: "Nether, Bastions, Villagers", stock: 3, quantity: 0, price: 3.00},
+    {name: "Netherite", rarityPercent: 0, location: "Nether, Bastions", stock: 3, quantity: 0, price: 15.00},
+    {name: "Resin Brick", rarityPercent: 0, location: "Pale Oak Forest, Woodland Mansions", stock: 3, quantity: 0, price: 4.50},
+    {name: "Amethyst Shard", rarityPercent: 0, location: "Amethyst Geodes, Ancient Cities, Trial Chambers", stock: 3, quantity: 0, price: 6.00},
 ];
 let cart = [];
 let price = 0;
@@ -86,6 +86,7 @@ async function toShop() {
                         cart.splice(itemx, 1);
                         console.log(cart);
                         price -= price;
+                        item.quantity -= 1;
                     }
                     else {
                         console.log("This item is not in your cart.");
@@ -167,12 +168,11 @@ async function toShop() {
             }
 
             //cart functionality
-            const quant = item.quantity += 1
-            const itemIndex = cart.indexOf(item);
+            const itemIndex = cart.findIndex(entry => entry.startsWith(item.name));
             if (itemIndex !== -1) {
-                cart.splice(item, 1);
-                cart.push(`${item} x${quant}`);
-                price += item.price;
+                cart.splice(itemIndex, 1);
+                cart.push(`${item} x${item.quantity + 1}`);
+                console.log(cart);
             }
             
         
