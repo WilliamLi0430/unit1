@@ -69,7 +69,7 @@ async function toShop() {
             //access cart with "c"
             else if (shopLower === "c") {
                 let decimalPrice = price.toFixed(2);
-                console.log(`You currently have ${cart} in your cart.`);
+                console.log(`You currently have ${cart} x${item.quantity} in your cart.`);
                 console.log(`The total price of your cart is $${decimalPrice}`);
             }
 
@@ -83,10 +83,12 @@ async function toShop() {
 
                     const itemx = cart.findIndex(item => item.toLowerCase() === removeLower);
                     if (itemx > -1) {
-                        cart.splice(itemx, 1);
                         console.log(cart);
-                        price -= price;
+                        price -= item.price;
                         item.quantity -= 1;
+                        if (item.quantity === 0) {
+                            cart.splice(itemx, 1);
+                        }
                     }
                     else {
                         console.log("This item is not in your cart.");
@@ -163,16 +165,10 @@ async function toShop() {
             else if (item) {
                 console.log(`Added a ${item.name} to your cart.`);
                 cart.push(item.name);
+                item.quantity = (item.quantity || 0) + 1;
                 price += item.price;
                 item.stock -= 1;
-            }
-
-            //cart functionality
-            const itemIndex = cart.findIndex(entry => entry.startsWith(item.name));
-            if (itemIndex !== -1) {
-                cart.splice(itemIndex, 1);
-                cart.push(`${item} x${item.quantity + 1}`);
-                console.log(cart);
+                console.log(item.quantity);
             }
             
         
