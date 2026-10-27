@@ -27,7 +27,7 @@ async function toShop() {
                     let decimalPrice = price.toFixed(2);
     
                     // Find the item in your catalog that has been added to the cart
-                    const cartItem = shoppingList.find(thing => thing.quantity > 0);
+                    const cartItem = shoppingList.find(ct => ct.quantity > 0);
 
                     if (cartItem) {
                         // Fix: Use cartItem.name instead of the cart array
