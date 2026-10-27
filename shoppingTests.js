@@ -47,9 +47,9 @@ async function toShop() {
                         const remove = await rl.question("Type the item name of the item you would like to remove. ");
                         const removeLower = remove.toLowerCase();
     
-                        const itemx = cart.findIndex(item => item.toLowerCase() === removeLower);
+                        const itemx = cart.findIndex(thitem => thitem.toLowerCase() === removeLower);
                         if (itemx > -1) {
-                            console.log(cart);
+                            const item = cart[itemx];
                             price -= item.price;
                             item.quantity -= 1;
                             if (item.quantity === 0) {
@@ -97,6 +97,7 @@ async function toShop() {
                     cart.push(item.name);
                     item.quantity = (item.quantity || 0) + 1;
                     price += item.price;
+                    console.log(price);
                     item.stock -= 1;
                     console.log(item.quantity);
                 }
@@ -108,7 +109,7 @@ async function toShop() {
         }
     
         //receipt
-        let discountPrice = price * discount;
+        let discountPrice = price;
         let decimalPrice = +discountPrice.toFixed(2);
         console.log(`Your total is $${decimalPrice}`);
     }
