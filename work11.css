@@ -1,1 +1,8 @@
-html,
+.box {
+    width: 20rem;
+    height: 30rem;
+    background: #2409fd;
+}
+.container {
+    display: flex;
+}
