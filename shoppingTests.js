@@ -25,12 +25,9 @@ async function toShop() {
                 //access cart with "c"
                 if (shopLower === "c") {
                     let decimalPrice = price.toFixed(2);
-    
-                    // Find the item in your catalog that has been added to the cart
                     const cartItem = shoppingList.find(ct => ct.quantity > 0);
 
                     if (cartItem) {
-                        // Fix: Use cartItem.name instead of the cart array
                         console.log(`You currently have ${cartItem.name} x${cartItem.quantity} in your cart.`);
                         } else {
                     console.log("Your cart is currently empty.");
@@ -46,17 +43,17 @@ async function toShop() {
                     try {
                         const remove = await rl.question("Type the item name of the item you would like to remove. ");
                         const removeLower = remove.toLowerCase();
-    
-                        const itemx = cart.findIndex(thitem => thitem.toLowerCase() === removeLower);
+
+                        const itemx = cart.findIndex(thitem => thitem.name.toLowerCase() === removeLower);
                         if (itemx > -1) {
                             const item = cart[itemx];
                             price -= item.price;
                             item.quantity -= 1;
+                            item.stock += 1;
                             if (item.quantity === 0) {
                                 cart.splice(itemx, 1);
                             }
-                        }
-                        else {
+                        } else {
                             console.log("This item is not in your cart.");
                         }
                     } finally {
@@ -93,16 +90,14 @@ async function toShop() {
     
                 //add an item to a cart when item name is written
                 else if (item) {
-                    console.log(`Added a ${item.name} to your cart.`);
-                    cart.push(item.name);
-                    item.quantity = (item.quantity || 0) + 1;
-                    price += item.price;
-                    console.log(price);
                     item.stock -= 1;
-                    console.log(item.quantity);
+                    item.quantity += 1;
+                    price += item.price;
+                    if (!cart.includes(item)) {
+                        cart.push(item);
+                    }
+                    console.log(cart);
                 }
-                
-            
             } finally {
                 rl.close();
             }
