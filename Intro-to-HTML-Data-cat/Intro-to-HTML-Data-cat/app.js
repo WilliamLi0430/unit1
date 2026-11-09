@@ -10,10 +10,13 @@ function inject(item) {
   );
 }
 
-btn.addEventListener("click", function () {
-  x++;
-  rgb();
-});
+//mass adding event listeners
+const buttons = document.querySelectorAll("button");
+buttons.forEach((buttons) => 
+  buttons.addEventListener("click", function (event) {
+    console.log(event.target.closest(".card").getAttribute("data-item"));
+  })
+)
 
 //make 1 html card, comment it out
 //select the container
