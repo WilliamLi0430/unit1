@@ -97,6 +97,7 @@ async function toShop() {
                         if (item.quantity === 0) {
                             cart.splice(itemx, 1);
                         }
+                        console.log(`You now have ${item.name} x${item.quantity} in your cart.`);
                     } else {
                         console.log("This item is not in your cart.");
                     }
