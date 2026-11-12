@@ -11,3 +11,6 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
+.container p {
+  font-size: 3rem;
+}
