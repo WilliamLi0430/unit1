@@ -1,0 +1,32 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="pagetest1.css" />
+  </head>
+  <body>
+    <div class="page-switcher">
+        <!-- Hidden radio buttons control the state -->
+        <input type="radio" name="pages" id="tab1" checked>
+        <input type="radio" name="pages" id="tab2">
+
+        <!-- Styled labels act as the clickable buttons -->
+        <div class="controls">
+            <label for="tab1" class="page-btn">Page 1</label>
+            <label for="tab2" class="page-btn">Page 2</label>
+        </div>
+
+        <!-- Content panels -->
+        <div class="content page-1">
+            <h2>Page 1 Content</h2>
+            <p>This is the first view.</p>
+        </div>
+        <div class="content page-2">
+          <h2>Page 2 Content</h2>
+          <p>This is the second view.</p>
+        </div>
+    </div>
+    <script src="appshop.js"></script>
+  </body>
+</html>

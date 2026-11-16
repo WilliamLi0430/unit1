@@ -1,0 +1,36 @@
+/* Hide the actual radio circles */
+.page-switcher input[type="radio"] {
+  display: none;
+}
+
+/* Hide all content sections by default */
+.page-switcher .content {
+  display: none;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+/* Show the matching content when its radio button is checked */
+#tab1:checked ~ .page-1,
+/* IF tab 1 is currently being viewed, it is the only page that the viewer sees*/
+#tab2:checked ~ .page-2 {
+/* WHEN tab 2 is clicked, it checks tab 2 and unckecks tab 1 */
+  display: block;
+}
+
+/* Highlight the active button label */
+#tab1:checked ~ .controls label[for="tab1"],
+#tab2:checked ~ .controls label[for="tab2"] {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.page-btn {
+  cursor: pointer; /* Shows hand icon on hover */
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: inline-block;
+}
