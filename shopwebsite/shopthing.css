@@ -44,7 +44,7 @@ body {
 .page-switcher .content {
   display: none;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #979595;
   margin-top: 10px;
 }
 #tab1:checked ~ .page-1,
