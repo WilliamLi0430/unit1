@@ -34,9 +34,13 @@ body {
 .card {
   background-color: rgb(41, 145, 243);
   width: 350px;
-  height: 450px;
+  height: 440px;
   text-align: center; 
   margin: 2rem;
+}
+.card button {
+  width: 90px;
+  height: 30px;
 }
 .page-switcher input[type="radio"] {
   display: none;
@@ -48,7 +52,8 @@ body {
   margin-top: 10px;
 }
 #tab1:checked ~ .page-1,
-#tab2:checked ~ .page-2 {
+#tab2:checked ~ .page-2,
+#tab3:checked ~ .page-3 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -56,7 +61,8 @@ body {
   gap: 2rem;
 }
 #tab1:checked ~ .controls label[for="tab1"],
-#tab2:checked ~ .controls label[for="tab2"] {
+#tab2:checked ~ .controls label[for="tab2"],
+#tab3:checked ~ .controls label[for="tab3"] {
   background-color: #007bff;
   color: white;
   border-color: #007bff;
