@@ -17,11 +17,13 @@
       <input type="radio" name="pages" id="tab1" checked>
       <input type="radio" name="pages" id="tab2">
       <input type="radio" name="pages" id="tab3">
+      <input type="radio" name="pages" id="tab4">
 
       <div class="controls">
         <label for="tab1" class="page-btn">Armor Trims</label>
         <label for="tab2" class="page-btn">Ores</label>
-        <label for="tab3" class="page-btn">Miscellaneous</label>
+        <label for="tab3" class="page-btn">Utilities</label>
+        <label for="tab4" class="page-btn">Codes</label>
       </div>
 
       <div class="content page-1">
@@ -211,37 +213,41 @@
       </div>
 
       <div class="content page-3">
-        <div class="card" data-item="miscellaneous">
+        <div class="card" data-item="utilities">
           <h2>Smithing Table</h2>
           <img src="zzzsmithingtable.webp" alt="" />
-          <p class="price">$9.88</p>
+          <p class="price">$10.00</p>
           <button>Add to Cart</button>
         </div>
-        <div class="card" data-item="miscellaneous">
+        <div class="card" data-item="utilities">
           <h2>Heavy Core</h2>
           <img src="zzzheavycore.webp" alt="" />
-          <p class="price">$9.50</p>
+          <p class="price">$25.00</p>
           <button>Add to Cart</button>
         </div>
-        <div class="card" data-item="miscellaneous">
+        <div class="card" data-item="utilities">
           <h2>Breeze Rod</h2>
           <img src="zzzbreezerod.png" alt="" />
-          <p class="price">$9.88</p>
+          <p class="price">$0.50</p>
           <button>Add to Cart</button>
         </div>
-        <div class="card" data-item="miscellaneous">
-          <h2>Ward Trim</h2>
-          <img src="" alt="" />
-          <p class="price">$9.50</p>
+        <div class="card" data-item="utilities">
+          <h2>Elytra</h2>
+          <img src="zzzelytra.png" alt="" />
+          <p class="price">$25.00</p>
           <button>Add to Cart</button>
         </div>
       </div>
+
+      <div class="content page-4">
+        <form action="submit">
+          <label for="coupon" class="coupontitle">enter coupon code</label>
+          <input type="text" name="coupon" id="coupon"/>
+          <button id="coupon-btn" type="submit">enter code</button>
+        </form>
+      </div>
+
     </div>
-    <form action="submit">
-      <label for="coupon">enter coupon code</label>
-      <input type="text" name="coupon" id="coupon"/>
-      <button id="coupon-btn" type="submit">enter code</button>
-    </form>
     <script src="appshop.js"></script>
   </body>
 </html>
