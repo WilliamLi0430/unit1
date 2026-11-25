@@ -18,15 +18,41 @@ buttons.forEach((buttons) =>
   })
 ) */
 
-document.querySelector("form").addEventListener("submit", function(event) {
+/* document.querySelector("form").addEventListener("submit", function(event) {
   event.preventDefault();
   console.log("submitted form");
   let x = document.querySelector("#coupon");
   console.log(x.value);
   x.value = "";
 });
-
+ */
 //make 1 html card, comment it out
 //select the container
 //forEach on items to inject to screen
 //select add cart buttons
+
+function inject(item) {
+  const container = document.querySelector(".container");
+  container.insertAdjacentHTML(
+    "beforeend",
+    `<div class="card">
+        <h2 class="card-header">${item.name}</h2>
+        <img src="${item.img}" alt="" />
+        <p>filler filler filler</p>
+      </div> `,
+  );
+}
+//reminder to add class to button
+const buttons = document.querySelectorAll("button");
+buttons.forEach((button) =>
+  button.addEventListener("click", function (event) {
+    console.log(event.target.closest(".card").getAttribute("data-item"));
+    //go find item in array
+    //items[data-item]
+  }),
+);
+
+function showCart() {
+  document.querySelector(".pop").style.display = "flex";
+}
+showCart();
